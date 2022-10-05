@@ -1,0 +1,17 @@
+.matrix-interface {
+  display: flex;
+  justify-content: center;
+}
+
+.cel {
+  border: 1px solid black;
+  padding: 2em;
+}
+
+.colored {
+  background-color: rgb(177, 23, 2);
+}
+
+.blank {
+  background-color: unset;
+}
