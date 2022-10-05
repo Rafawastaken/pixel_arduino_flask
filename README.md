@@ -16,4 +16,4 @@ tldr; Graphical interface to select LED in the Matrix to turn off, turn on. Pyth
 
 ## Run it
 
-> python run.py
+> python3 run.py
