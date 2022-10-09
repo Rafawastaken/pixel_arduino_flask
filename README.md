@@ -21,17 +21,17 @@ tldr; Graphical interface to select LED in the Matrix to turn off, turn on. Pyth
 - [Aliexpress Product](https://pt.aliexpress.com/item/32717752819.html "Aliexpress link")
 
 3. Breadboard
-4. Jumper Cables;
+4. Jumper Cables
 
 ## Project Structure
 
 The project has 2 main folder:
 
-1. Hardware:
+### Hardware:
 
 - Contains all the arduino codes and connections;
 
-2. Web:
+### Web:
 
 - Contains the webapp to drive the LED matrix;
 
