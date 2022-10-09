@@ -1,16 +1,10 @@
-from flask import Flask, render_template
-from flask_restful import Api
-from flask_restful import Resource, reqparse, abort, marshal_with, fields
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__)
 
-api = Api(app)
+from .routes.routes import fronted
 
-# Backen Api
-communication_args = reqparse.RequestParser()
+app.register_blueprint(fronted, url_prefix="/")
 
-
-# Routes
-@app.route('/')
-def home():
-    return render_template('home.html')

@@ -20,5 +20,5 @@ function change_color(box) {
 }
 
 function send_position(box) {
-  // console.log(box.getAttribute("aria-label"));
+  // mandar request com cordenada do pixel e seu respetivo estado
 }
