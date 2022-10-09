@@ -35,6 +35,10 @@ The project has 2 main folder:
 
 - Contains the webapp to drive the LED matrix;
 
+### Test:
+
+- Contains the jupyter notebooks, isolated scripts like a _proof of concept_
+
 ## Install Dependencies
 
 > python3 -m pip install -r requirements.txt
