@@ -1,7 +1,7 @@
 from flask import Blueprint
 from flask_restful import Api, Resource, reqparse, abort, marshal_with, fields
-from app import db
 from app.routes.models import PixelModel
+from app import db
 
 # Register blueprint
 api_bp = Blueprint('api', __name__)
