@@ -30,7 +30,7 @@ function change_color(box) {
 function send_position(pixel_id, estado_enviar) {
   let xhr = new XMLHttpRequest();
 
-  xhr.open("POST", "http://127.0.0.1:5000/post-matrix/" + pixel_id);
+  xhr.open("POST", "http://127.0.0.1:5000/update-matrix/" + pixel_id);
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send(
     JSON.stringify({

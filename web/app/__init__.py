@@ -23,8 +23,8 @@ app.register_blueprint(fronted, url_prefix="/")
 app.register_blueprint(api_bp)
 
 # Api Endpoint
-api.add_resource(PixelApiGET, '/update-matrix') # Get status of pixels
-api.add_resource(PixelApiPATCH, '/post-matrix/<int:id_pixel>') # Change status of pixel
+api.add_resource(PixelApiGET, '/matrix-status') # Get status of pixels
+api.add_resource(PixelApiPATCH, '/update-matrix/<int:id_pixel>') # Change status of pixel
 
 # Create tables
 db.create_all()
