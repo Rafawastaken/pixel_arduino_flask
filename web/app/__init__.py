@@ -8,7 +8,7 @@ db = SQLAlchemy(app) # Database object
 # Local
 from .routes.models import PixelModel
 from .routes.routes import fronted
-from .api.api import api_bp, PixelApi
+from .api.api import PixelApiGET, PixelApiPATCH, api_bp
 from .scripts.create_pixels import create_pixels
 
 # App Configs
@@ -23,10 +23,13 @@ app.register_blueprint(fronted, url_prefix="/")
 app.register_blueprint(api_bp)
 
 # Api Endpoint
-api.add_resource(PixelApi, '/update-matrix')
+api.add_resource(PixelApiGET, '/update-matrix') # Get status of pixels
+api.add_resource(PixelApiPATCH, '/post-matrix/<int:id_pixel>') # Change status of pixel
+
+# Create tables
+db.create_all()
 
 # Check if pixeis
-db.create_all()
 pixels = PixelModel.query.all()
 if not pixels:
     status = create_pixels()
